@@ -1,0 +1,21 @@
+{
+  "name": "sha",
+  "version": "1.0.0",
+  "description": "this is my first library I will be writing a function that takes in sha and returns a promise with the hash value",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sha",
+    "hashed",
+    "hashing",
+    "passwords",
+    "promises"
+  ],
+  "author": "vaibhav ahuja",
+  "license": "ISC",
+  "dependencies": {
+    "sha.js": "^2.4.11"
+  }
+}

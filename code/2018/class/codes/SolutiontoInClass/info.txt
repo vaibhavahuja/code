@@ -1,0 +1,2 @@
+This folder contains all the solutions to every question done in class.
+Arranged according to the file at - goo.gl/fPzGhz

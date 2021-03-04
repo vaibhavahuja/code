@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  padding-top: 56px;
+  font-family: "Open Sans";
+  /* font-weight: bold; */
+}
+
+.my-4{
+  font-weight: bold;
+}
+
+.mb-4{
+  font-weight: 200;
+}
+.naviu{
+  background-color: #007acc;
+}
+
+.active{
+  border-bottom: 2px solid white;
+  border-radius: 2px;
+}
