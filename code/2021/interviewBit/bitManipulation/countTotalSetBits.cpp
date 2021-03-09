@@ -1,43 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
-#define vi vector<int>
-#define pii pair<int, int>
+#define vi vector<ll>
+#define pii pair<ll, ll>
 #define vp vector<pii>
 #define vs vector<string>
-#define mii map<int, int>
-#define MOD 1000000007
-void show(auto a){for(int i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl;}
+#define mii map<ll, ll>
+void show(vi a){for(ll i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl;}
 
-string toBinary(int i){
-	string s= "";
-	while(i > 0){
-		s += (i%2) + '0';
-		i/=2;
+#define MOD 1000000007
+
+ll ans = 0;
+ll findLargestPower2(ll n){
+	ll q = 0;
+	while((1<<q)<=n){
+		q++;
 	}
-	reverse(s.begin(), s.end());
-	return s;
+	return (q-1);
 }
 
-int countBits(int a){
-	string s = toBinary(a);
-	int ans = 1;
+ll findAnswer(ll n){
+	if(n != 0){
+		ll x = findLargestPower2(n);
+		// cout<<x<<endl;
+		ans = (ans%MOD + ((((1<<(x-1))%MOD)*(x%MOD))%MOD + ((n - (1<<x) + 1)%MOD))%MOD)%MOD;
 
-	int w = s.length();
-	if(s == "1") return 1;
-	for(int i = 0; i < w-1; i++){
-		ans *= 2;
-		ans %= MOD;	
-	}	
-	for(int i = 0; i < s.size(); i++){
-		if(s[i] == '1') ans++;
+		ans%=MOD;
+		findAnswer(n-(1<<x));
 	}
-	return ans;
+
+	return ans%MOD;
 }
 
 int main(){
   ios_base::sync_with_stdio(false);
-
-  int a; cin>>a;
-  cout<<countBits(a)<<endl;
+  ll p; cin>>p;
+  cout<<findAnswer(p)<<endl;
 }
+

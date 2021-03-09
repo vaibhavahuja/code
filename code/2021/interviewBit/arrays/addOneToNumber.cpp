@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 #define ll long long int
 #define vi vector<int>
@@ -6,12 +7,12 @@ using namespace std;
 #define vp vector<pii>
 #define vs vector<string>
 #define mii map<int, int>
-void show(auto a){for(int i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl;}
+void show(vi a){for(auto i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl;}
 
 int main(){
   ios_base::sync_with_stdio(false);
 
-  vi a = {0, 3, 7, 6, 4, 0, 5, 5, 5};
+  vi a = {0, 3, 7, 6, 4, 0, 9, 9, 9};
 
   int p = a.size() - 1;
   int carry = 0;
@@ -34,7 +35,7 @@ int main(){
   else{
   	int u = 0;
   	while(a[u] == 0) u++;
-  	for(u; u < a.size(); u++){
+  	for(u=0; u < a.size(); u++){
   		b.push_back(a[u]);
   	}
   	show(b);

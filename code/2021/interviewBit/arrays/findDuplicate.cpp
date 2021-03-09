@@ -6,7 +6,7 @@ using namespace std;
 #define vp vector<pii>
 #define vs vector<string>
 #define mii map<int, int>
-void show(auto a){for(int i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl;}
+void show(vi a){for(int i=0;i<a.size();i++){cout<<a[i]<<" ";}cout<<endl;}
 
 int main(){
   ios_base::sync_with_stdio(false);
